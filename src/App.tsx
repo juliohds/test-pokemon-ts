@@ -26,7 +26,7 @@ function App() {
   
   return (
     <div>
-      {pokemonFinded.name !== "" ? <div style={{ position: 'absolute'}} ><img src="https://t2.tudocdn.net/568114?w=646&h=284" /><span style={{ fontSize: 24, fontWeight: 'bold',  transform: 'rotate(-90deg)', position: 'absolute', right: 20, top: '45%' }}>{pokemonFinded.name}</span></div> : null }
+      {pokemonFinded.name !== "" ? <div style={{ position: 'relative', width: 568 }}><img style={{ position: 'relative' }}  src="https://t2.tudocdn.net/568114?w=646&h=284" /><span style={{ fontSize: 24, fontWeight: 'bold',  transform: 'rotate(-90deg)', position: 'absolute', right: 20, top: '50%' }}>{pokemonFinded.name}</span></div> : null }
       <TopPokemons capture={pokemon.savePokemon} />
       {pokemons.length > 0 ? <><input value={search} onChange={(e) => setSearch(e.target.value)} /> <button onClick={() => handleFindPokemon()}>Find one pokemon</button></> : null }
       {pokemons.length > 0 ? pokemons.map((v: any) => <ul><li>{v.name}</li></ul>) : <button onClick={() => handleGetPokemon()}>GET ALL POKEMONS</button>}      
